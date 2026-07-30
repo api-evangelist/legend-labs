@@ -1,7 +1,24 @@
 aid: legend-labs
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/legend-labs.png
 name: Legend Labs
-description: Legend Labs is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Legend Labs is a company surfaced as a portfolio company of a16z and added
+  to the API Evangelist network as a stub for enrichment. The upstream a16z investment
+  list publishes the company name only, with no website, sector, or description, and an
+  enrichment pass on 2026-07-19 could not corroborate which of several unrelated
+  businesses operating under the Legend Labs name is the a16z-backed entity. The profile
+  therefore remains an unverified lead with no confirmed domain, developer portal, or API
+  surface, held open pending a published website or funding announcement.
 url: https://raw.githubusercontent.com/api-evangelist/legend-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +28,45 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Venture Backed
+- a16z
+- Portfolio Lead
+- Unverified
+x-enrichment:
+  last_run: '2026-07-19'
+  status: unresolved-identity
+  result: none
+  summary: Enrichment could not resolve which company named "Legend Labs" is the a16z
+    portfolio entry. The upstream a16z investment list carries the company name only
+    — no website, category, or description — so there is no verified domain to anchor
+    artifact discovery. No artifacts were produced; producing any would require
+    fabricating an identity.
+  candidates_ruled_out:
+  - url: https://legendlabs.com/
+    status: 200
+    finding: Brand and communications consulting firm. No API, no a16z mention.
+  - url: https://legendlabs.ai/
+    status: 200
+    finding: AI 3D historical-figure chat platform. No API, no a16z mention.
+  - url: https://legendlabs.io/
+    status: 200
+    finding: Parked domain listed for sale via Spaceship.com. Not a company site.
+  - url: https://github.com/legend-labs
+    status: 200
+    finding: GitHub org "Legend" (legend.fyi), two forked repos, inactive since 2020.
+      No a16z linkage.
+  - url: https://github.com/LegendLabs
+    status: 200
+    finding: '"The Geek Division of Legend Boats" (Ontario, Canada). Salesforce tooling
+      forks. Not a16z-backed.'
+  sources_checked:
+  - https://a16z.com/investment-list/
+  - https://www.crunchbase.com/organization/legend-labs
+  next_step: Re-run once a16z publishes a website URL for this entry, or a funding
+    announcement identifies the company. Do not attach a domain without corroboration.
 apis: []
 maintainers:
 - FN: Kin Lane
